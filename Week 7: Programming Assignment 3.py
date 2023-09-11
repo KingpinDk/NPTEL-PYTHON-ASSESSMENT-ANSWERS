@@ -1,11 +1,12 @@
-def snake(M):
-  L = []
-  n = len(M)
-  for i in range(0,n):
-    if(i%2 == 0):
-        for j in range(0,n):
-            L.append(M[i][j])
-    else:
-        for j in range(n-1,-1,-1):
-            L.append(M[i][j])
-  return L
+def snake(M): 
+  sk=0 
+  sm=[] 
+  for r in M: 
+    m=[] 
+    sk=sk+1 
+    if sk%2==0: 
+      m=r[::-1] 
+    else: 
+      m=r 
+    sm+=m 
+  return(sm) 
