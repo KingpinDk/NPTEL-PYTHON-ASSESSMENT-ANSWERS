@@ -1,13 +1,12 @@
-def DiagCalc(M):
-  n = len(M)
-  m = len(M[0])
-  val1 = 0
-  val2 = 0
-  for i in range(0,n):
-    for j in range(0,m):
-      if(i==j):
-        val1+=M[i][j]
-      if(i+j == n-1):
-        val2+=M[i][j]
-  print(val1)
-  print(val2, end='')
+def DiagCalc(L): 
+  L_sum=0 
+  R_sum=0 
+  m=L[::-1] 
+  for i in range(len(L)): 
+    for y in range(len(L)): 
+      if i==y: 
+        L_sum+=L[i][y] 
+        R_sum+=m[i][y] 
+        
+  print(L_sum) 
+  print(R_sum,end="")
